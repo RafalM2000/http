@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'http';
+  title1: string = 'Angular-In-Examples';
+  title2: string = 'Http, HttpClinet, HttpModel';
+
+  constructor() {}
 }
