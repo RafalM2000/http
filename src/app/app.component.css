@@ -7,10 +7,6 @@ h1, h2, h3 {
   color: white;
 }
 
-nav {
-  margin-bottom: 40px;
-}
-
 .active {
   color:rgb(212, 194, 24);
 }
@@ -23,3 +19,5 @@ a {
   border-radius: 5px;
   margin-left: 80px;
 }
+
+
