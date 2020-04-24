@@ -2,9 +2,11 @@
   background-color: rgb(159, 172, 172);
   padding: 20px;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
-h5 {
+h3 {
   color: white;
   text-align: center;
 }
+
