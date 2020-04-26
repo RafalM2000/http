@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
-import { Observable } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
-interface Paintings {
-  id: number;
+
+interface Authors {
   name: string;
-  location: string;
+  link: string;
+  desc: string;
 }
 
 @Component({
@@ -17,12 +17,15 @@ interface Paintings {
 export class OneComponent implements OnInit {
 
   subTitle: string = 'Fetching data from JSON file';
-  paintings$: Observable<Paintings[]>;
+  authors: Authors[];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.paintings$ = this.http.get<Paintings[]>('/data/paintings.json');
+    this.http.get<Authors[]>('/data/authors.json').
+    subscribe(
+      data => this.authors = data,
+      err => console.log('Wystąpił Błąd podczas pobierania pliku:', err)
+    );
   }
-
 }
