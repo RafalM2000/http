@@ -3,11 +3,13 @@
 </div>
 
 <div class="container">
-  <mat-card class="card">
+  <mat-card class="card" *ngFor="let author of authors">
     <mat-card-header>
-      <mat-card-title></mat-card-title>
+      <mat-card-title>{{author.name}}</mat-card-title>
     </mat-card-header>
+    <img mat-card-image src={{author.link}}>
     <mat-card-content>
+      <span>{{author.desc}} </span>
     </mat-card-content>
   </mat-card>
 </div>

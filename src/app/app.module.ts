@@ -2,11 +2,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MatCardModule } from '@angular/material/card';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AppComponent } from './app.component';
 import { OneComponent } from './one/one.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
 
 export const appRouter: Routes = [
   {path: '', component: OneComponent},
@@ -21,6 +22,7 @@ export const appRouter: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     MatCardModule,
     RouterModule.forRoot(appRouter),
     BrowserAnimationsModule
