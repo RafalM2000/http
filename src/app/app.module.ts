@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MatListModule } from '@angular/material/list';
+import { MatCardModule } from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -23,7 +23,7 @@ export const appRouter: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
-    MatListModule,
+    MatCardModule,
     RouterModule.forRoot(appRouter),
     BrowserAnimationsModule
   ],

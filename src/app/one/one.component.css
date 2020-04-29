@@ -9,4 +9,10 @@ h3 {
   color: white;
   text-align: center;
 }
+.card {
+  width: 60%;
+  margin-bottom: 30px;
+  margin-right: auto;
+  margin-left: auto;
+}
 

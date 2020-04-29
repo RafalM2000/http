@@ -3,7 +3,13 @@
 </div>
 
 <div class="container">
-  <mat-list-item *ngFor="let paint of paintings$ |async">
-    <span>{{paint.id}} {{paint.name}}</span>
-  </mat-list-item>
+  <mat-card class="card" *ngFor="let author of authors">
+    <mat-card-header>
+      <mat-card-title>{{author.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src={{author.link}}>
+    <mat-card-content>
+      <span>{{author.desc}} </span>
+    </mat-card-content>
+  </mat-card>
 </div>
