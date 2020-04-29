@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-two',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoComponent implements OnInit {
 
-  constructor() { }
+  subTitle: string = 'Fetching data from JSON file as text';
+  exampleText: string;
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+
+    this.http.get('/data/authors.json', {responseType: 'text'})
+    .subscribe(
+      res => this.exampleText = res,
+      err => console.log('Błąd pobierania pliku: ', err)
+    );
   }
 
 }
