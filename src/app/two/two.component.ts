@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoComponent implements OnInit {
 
-  subTitle: string = 'Fetching data from JSON file as text';
+  subTitle: string = 'Fetching text from a file';
 
   constructor() { }
 
